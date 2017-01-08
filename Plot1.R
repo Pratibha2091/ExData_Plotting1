@@ -1,0 +1,5 @@
+data <- read.table("HPC.txt", header = TRUE, sep = ";", dec = ".", na.strings = "?")
+x <- subset(data, Date == "2/2/2007")
+y <- subset(data, Date == "1/2/2007")
+z <- rbind(x, y)
+hist(z$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power(kilowatts)")
